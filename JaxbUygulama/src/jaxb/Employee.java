@@ -7,21 +7,21 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder={"id", "name", "department" })
-public class Employee{
-	
+@XmlType(propOrder = {"id", "name", "surname", "department"})
+public class Employee {
+
 	private int id;
+
 	private String name;
+
+	private String surname;
+
 	private Department department;
-	
-	public Employee() {
-		super();
-	}
-	
-	public Employee(int id, String name, Department department) {
-		super();
+
+	public Employee(int id, String name, String surname, Department department) {
 		this.id = id;
 		this.name = name;
+		this.surname = surname;
 		this.department = department;
 	}
 
@@ -41,6 +41,14 @@ public class Employee{
 		this.name = name;
 	}
 
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
 	public Department getDepartment() {
 		return department;
 	}
@@ -48,9 +56,4 @@ public class Employee{
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
-	@Override
-    public String toString() {
-        return "Employee [id=" + id + ", firstName=" + name + ", department="+ department + "]";
-    }
 }

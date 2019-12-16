@@ -19,18 +19,18 @@ public class Main {
 	
 	private static void marshall() {
 		
-		Employee employee = new Employee(1,"Halil İbrahim Muktar", new Department(100,"Jr.Java Developer"));
+		Employee employee = new Employee(1,"Halil İbrahim","Muktar", new Department(22081993, "Java Core", "Jr.Java Developer", "Sovos Foriba"));
 		
 		List<Employee> list = new ArrayList<>();
 		
 		list.add(employee);
 		
-		EmployeeWrapper wrapper = new EmployeeWrapper();
+		Root wrapper = new Root();
 		wrapper.setEmployees(list);
 		
 		File output = new File("src\\employee.xml");
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeWrapper.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(wrapper, output);
@@ -42,13 +42,13 @@ public class Main {
 
 	public static void unMarshall() {
 		
-		EmployeeWrapper employee = null;
+		Root employee = null;
 		File file = new File("src\\employee.xml");
 		
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeWrapper.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
 			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			employee = (EmployeeWrapper) unmarshaller.unmarshal(file);
+			employee = (Root) unmarshaller.unmarshal(file);
 			
 		}catch(JAXBException e) {
 			e.printStackTrace();
