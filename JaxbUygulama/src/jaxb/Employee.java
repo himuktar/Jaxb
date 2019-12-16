@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = { "id", "name", "department" })
+@XmlType(propOrder = { "id", "name", "surname", "department" })
 public class Employee {
 
 	private int id;
