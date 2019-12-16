@@ -42,18 +42,18 @@ public class Main {
 
 	public static void unMarshall() {
 		
-		Root rootObject = null;
+		Root employee = null;
 		File file = new File("src\\employee.xml");
 		
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
 			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			rootObject = (Root) unmarshaller.unmarshal(file);
+			employee = (Root) unmarshaller.unmarshal(file);
 			
 		}catch(JAXBException e) {
 			e.printStackTrace();
 		}
 		
-	    System.out.println(rootObject);
+	    System.out.println(employee);
 	}
 }

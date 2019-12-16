@@ -21,19 +21,19 @@ public class Main {
 		
 		Employee employee = new Employee(1,"Halil İbrahim","Muktar", new Department(22081993, "Java Core", "Jr.Java Developer", "Sovos Foriba"));
 		
-		List<Employee> employeeList = new ArrayList<>();
+		List<Employee> list = new ArrayList<>();
 		
-		employeeList.add(employee);
+		list.add(employee);
 		
-		Root rootObject = new Root();
-		rootObject.setEmployees(employeeList);
+		Root wrapper = new Root();
+		wrapper.setEmployees(list);
 		
 		File output = new File("src\\employee.xml");
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-			marshaller.marshal(rootObject, output);
+			marshaller.marshal(wrapper, output);
 			
 		}catch(JAXBException e) {
 			e.printStackTrace();
@@ -42,18 +42,18 @@ public class Main {
 
 	public static void unMarshall() {
 		
-		Root rootObject = null;
+		Root employee = null;
 		File file = new File("src\\employee.xml");
 		
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
 			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-			rootObject = (Root) unmarshaller.unmarshal(file);
+			employee = (Root) unmarshaller.unmarshal(file);
 			
 		}catch(JAXBException e) {
 			e.printStackTrace();
 		}
 		
-	    System.out.println(rootObject);
+	    System.out.println(employee);
 	}
 }

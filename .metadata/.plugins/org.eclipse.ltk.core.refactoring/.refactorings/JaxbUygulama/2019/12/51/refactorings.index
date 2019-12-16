@@ -1,3 +1,6 @@
 1576532924387	Delete element
 1576532927456	Delete element
 1576532991488	Rename type 'EmployeeWrapper'
+1576534237316	Rename local variable 'wrapper'
+1576534255431	Rename local variable 'list'
+1576534306686	Rename local variable 'employee'
