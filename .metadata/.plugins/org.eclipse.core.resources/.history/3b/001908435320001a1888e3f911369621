@@ -19,7 +19,7 @@ public class Main {
 	
 	private static void marshall() {
 		
-		Employee employee = new Employee(1,"Halil İbrahim","MUKTAR", new Department(22081993, "Java Core", "Jr.Java Developer", "Sovos Foriba"));
+		Employee employee = new Employee(1,"Halil İbrahim","Muktar", new Department(22081993, "Java Core", "Jr.Java Developer", "Sovos Foriba"));
 		
 		List<Employee> employeeList = new ArrayList<>();
 		

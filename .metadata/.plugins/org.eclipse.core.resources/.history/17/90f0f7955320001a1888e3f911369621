@@ -17,10 +17,6 @@ public class Employee {
 	private String surname;
 
 	private Department department;
-	
-	public Employee() {
-		super();
-	}
 
 	public Employee(int id, String name, String surname, Department department) {
 		this.id = id;

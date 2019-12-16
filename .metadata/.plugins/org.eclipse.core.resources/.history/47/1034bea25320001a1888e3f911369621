@@ -9,10 +9,6 @@ public class Department {
 	private String title;
 
 	private String companyName;
-	
-	public Department() {
-		super();
-	}
 
 	public Department(int departmentID, String departmentName, String title, String companyName) {
 		this.departmentID = departmentID;
