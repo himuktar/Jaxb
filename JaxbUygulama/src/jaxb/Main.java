@@ -1,8 +1,6 @@
 package jaxb;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -14,26 +12,19 @@ public class Main {
 	public static void main(String[] args) {
 
 		marshall();
-		unMarshall();
+		//unMarshall();
 	}
 	
 	private static void marshall() {
 		
 		Employee employee = new Employee(1,"Halil İbrahim","MUKTAR", new Department(22081993, "Java Core", "Jr.Java Developer", "Sovos Foriba"));
 		
-		List<Employee> employeeList = new ArrayList<>();
-		
-		employeeList.add(employee);
-		
-		Root rootObject = new Root();
-		rootObject.setEmployees(employeeList);
-		
-		File output = new File("src\\employee.xml");
+		File output = new File("src/employee.xml");
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(Root.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(Employee.class);
 			Marshaller marshaller = jaxbContext.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-			marshaller.marshal(rootObject, output);
+			marshaller.marshal(employee, output);
 			
 		}catch(JAXBException e) {
 			e.printStackTrace();

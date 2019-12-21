@@ -7,4 +7,12 @@
 <fullyQualifiedTypeName name="javax.xml.bind.JAXBException"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.xml.bind.Unmarshaller"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAccessorOrder"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAccessOrder"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAttribute"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlTransient"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlList"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElementWrapper"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAccessorType"/>
 </qualifiedTypeNameHistroy>
